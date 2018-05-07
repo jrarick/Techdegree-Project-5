@@ -1,0 +1,39 @@
+.nav {
+  @include flexy($direction: column);
+  @include mq(medium) {
+    @include flexy($direction: row, $justify: space-around);
+  }
+}
+
+.nav__item {
+  @extend %link;
+  a {
+    @extend %link;
+    padding-left: 35%;
+    padding-right: 35%;
+    @include mq(medium) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    &[href="#type"] {
+      background-color: $color-secondary;
+      color: $color-tertiary--font;
+      &:hover {
+        background-color: darken($color-secondary, 10%)
+      }
+    }
+  }
+}
+
+.grid__col--9 {
+  @include mq(medium) {
+    width: 50%;
+  }
+}
+
+.grid__row {
+  &:first-of-type {
+    align-items: center;
+    justify-content: space-around;
+  }
+}

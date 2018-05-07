@@ -1,0 +1,55 @@
+// Fonts
+
+$font-url--google        : 'https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,300,400,500,700';
+$font-family--primary    : 'IBM Plex Sans', sans-serif;
+$font-family--secondary  : 'Helvetica', sans-serif;
+
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--regular    : 400;
+$font-weight--medium     : 500;
+$font-weight--bold       : 700;
+
+$font-size--sm           : 12pt;
+$font-size--base         : 16pt;
+$font-size--lg           : 20pt;
+$font-size--xl           : 28pt;
+
+// Breakpoints
+
+$brk-sm                  : 480px;
+$brk-md                  : 768px;
+$brk-lg                  : 1400px;
+
+// Colors
+
+$turquoise               : #00e0be;
+$aqua                    : #4cdbeb;
+$dusty-red               : #e65f6e;
+$burnt-orange            : #fa7346;
+$purple                  : #a07dcd;
+$green                   : #3cb950;
+$grey                    : grey;
+$black                   : black;
+$white                   : white;
+
+$color-primary           : $aqua;
+$color-secondary         : $turquoise;
+
+$color-primary--font     : $black;
+$color-secondary--font   : $grey;
+$color-tertiary--font    : $white;
+
+// Color Interface
+
+$ui-colors: (
+  'default'              : $aqua,
+  'success'              : $green,
+  'error'                : $dusty-red,
+  'warning'              : $burnt-orange,
+  'info'                 : $purple,
+);
+
+// Spacing
+
+$gutter-spacing          : 15px;

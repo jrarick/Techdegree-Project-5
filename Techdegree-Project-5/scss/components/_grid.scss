@@ -1,0 +1,65 @@
+.container {
+  display: grid;
+  grid-gap: 30px;
+}
+
+.grid__row {
+  margin-left: 5%;
+  margin-right: 5%;
+  @include mq(medium) {
+    @include flexy($direction: row);
+  }
+}
+
+// Theme color styling
+
+.theme__colors {
+  @extend %button-styling;
+  color: $color-secondary--font;
+  &.grid__col {
+    @include m(12) {
+      background-color: $color-secondary;
+      @extend %grid-col;
+    }
+    @include m(6) {
+      background-color: darken($color-primary, 17.5%);
+      @extend %grid-col;
+    }
+    @include m(4) {
+      background-color: lighten($color-primary, 10%);
+      @extend %grid-col;
+    }
+    @include m(3) {
+      background-color: lighten($purple, 10%);
+      @extend %grid-col;
+    }
+    @include m(5) {
+      background-color: lighten($green, 20%);
+      @extend %grid-col;
+      flex-grow: 2;
+    }
+    @include m(7) {
+      background-color: lighten($dusty-red, 10%);
+      @extend %grid-col;
+      flex-grow: 3;
+      &.centered {
+        background-color: lighten($dusty-red, 15%);
+        margin-bottom: 40px;
+      }
+    }
+    @include m(8) {
+      background-color: lighten($burnt-orange, 10%);
+      @extend %grid-col;
+      flex-grow: 2;
+    }
+  }
+}
+
+.theme__colors {
+  &[class^="grid__col"] {
+    @include mq(medium) {
+      text-align: center;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+button[class^="btn"] {
+  @extend %button-styling;
+  margin: $gutter-spacing;
+  color: $color-tertiary--font;
+  text-transform: uppercase;
+  font-weight: $font-weight--bold;
+  flex-grow: 1;
+}
+
+.grid__col--12 {
+  @include flexy($direction: column);
+  @include mq(medium) {
+    @include flexy($direction: row);
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,49 @@
+// Media Queries
+
+@mixin mq($size) {
+  
+  @if $size == 'small' {
+    @media only screen and (min-width: $brk-sm) {
+      @content;
+    }
+  }
+
+  @else if $size == 'medium' {
+    @media only screen and (min-width: $brk-md) {
+      @content;
+    }
+  }
+
+  @else if $size == 'large' {
+    @media only screen and (min-width: $brk-lg) {
+      @content;
+    }
+  }
+
+  @else {
+    @error "Value #{$size} is not valid. Must be small, medium, or large.";
+  }
+}
+
+// Flexbox Settings
+
+@mixin flexy($display: flex, $wrap: null, $direction: null, $justify: null) {
+  display: $display;
+  flex-wrap: $wrap;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
+// Element and Modifier BEM Selectors
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}

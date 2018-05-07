@@ -1,0 +1,44 @@
+// Links
+
+%button-styling {
+  border: none;
+  border-radius: 4px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+%link {
+  @extend %button-styling;
+  text-decoration: none;
+  color: $color-primary--font;
+  font-size: $font-size--sm;
+  font-weight: $font-weight--light;
+}
+
+// Images
+
+%imgframe {
+  padding: 15px;
+  border: solid;
+  border-width: 2px;
+  border-color: $color-secondary--font;
+}
+
+// Headlines
+
+
+
+// Nav Items
+
+
+
+// Grid Col
+
+%grid-col {
+  margin: 5px;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: $font-weight--medium;
+  flex-grow: 1;
+}

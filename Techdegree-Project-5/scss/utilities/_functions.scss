@@ -1,0 +1,30 @@
+// Import google font if defined
+
+@if variable-exists(font-url--google) {
+  @import url($font-url--google);
+}
+
+// Color Shading
+
+@function palette($palette, $shade: 'base') {
+	@return map-get(map-get($color-palettes, $palette), $shade);
+}
+
+// Display color value for each theme
+
+@each $theme, $color in $ui-colors {
+  .btn--#{$theme} {
+    background-color: $color;
+    &:focus {
+      background-color: lighten($color, 10%);
+    }
+  }
+}
+
+// Iterate through the grid columns
+
+@for $i from 1 through 12 {
+  .grid__col--#{$i} {
+    text-align: center;
+  }
+}
