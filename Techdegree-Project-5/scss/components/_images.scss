@@ -14,6 +14,8 @@
 
 .grid__row {
   &:nth-of-type(4) {
-    @include flexy($justify: space-around);
+    @include mq(medium) {
+      @include flexy($justify: space-around);
+    }
   }
 }
